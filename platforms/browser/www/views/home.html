@@ -1,0 +1,49 @@
+<!-- Toolbar -->
+<md-toolbar class="toolbar" layout="row" >
+    <div class="md-toolbar-tools filled">
+        <!--md-menu>
+            <md-button aria-label="Menu" class="md-icon-button filled" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin md-svg-src="svg/menu.svg">menu</md-icon>
+            </md-button>
+            <md-menu-content width="4" >
+                <md-menu-item ng-repeat="ctgry in categories">
+                    <md-button aria-label="{{ctgry.code}}" ng-click="recipie(ctgry.id)">{{ctgry.label | i18next}}</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu-->
+        <h2 class="md-flex">{{'app.name' | i18next}}</h2>
+        <span flex></span>
+        <md-menu>
+            <md-button aria-label="Setting" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin class="material-icons">more_vert</md-icon>
+            </md-button>
+            <md-menu-content width="3" >
+                <md-menu-item>
+                    <md-button ng-click="share()">Share</md-button>
+                </md-menu-item>     
+                <md-menu-item>
+                    <md-button ng-click="rateus()">Rate Me</md-button>
+                </md-menu-item> 
+                <md-menu-item>
+                    <md-button ng-click="feedback()">Feedback</md-button>
+                </md-menu-item>     
+            </md-menu-content>
+        </md-menu>
+   </div>    
+</md-toolbar>
+
+<!-- Card for Saivam Category-->
+<!--md-card layout-align="end center" ng-click="recipie(2)">
+    <img src="img/saivam.png" class="md-card-image cat-image" alt="saivam" />
+    <md-card-content>
+        <span class="md-display-1">{{'pirivu.saivam' | i18next}}</span>
+    </md-card-content>
+</md-card-->
+
+<!-- Card for Asaivam Category-->
+<!--md-card layout-align="end center" ng-click="recipie(4)">
+    <img src="img/asaivam.png" class="md-card-image cat-image" alt="Asaivam" />
+    <md-card-content>
+        <span class="md-display-1">{{'pirivu.asaivam' | i18next}}</span>
+    </md-card-content>
+</md-card-->
