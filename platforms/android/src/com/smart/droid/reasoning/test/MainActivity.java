@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.smart.droid.reasoning;
+package com.smart.droid.reasoning.test;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

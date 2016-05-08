@@ -23,24 +23,22 @@ angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next'])
 	])
 .config(function($mdThemingProvider) {
 	$mdThemingProvider.theme('default')
-		.primaryPalette('red')
-		.accentPalette('green')
-    .warnPalette('deep-orange')
-		.backgroundPalette('grey');
+		.primaryPalette('light-green')
+		.accentPalette('brown')
+    .warnPalette('red');
 	})
 .run(function($rootScope, $location) {
 
-    /*
 	  //Share App
   	$rootScope.share = function () {   
   		window.analytics.trackEvent('Setting', 'App Share');    
-  		window.plugins.socialsharing.share('Tamil Samayal kuripugal - A complete cooking guide free on Android', 'Tamil Samayal kuripugal', null, 'https://play.google.com/store/apps/details?id=com.career.wrap.tamil.samayal');
+  		window.plugins.socialsharing.share('Reasoing Refresher - Keep testing your IQ', 'Reasoning Refresher', null, 'https://play.google.com/store/apps/details?id=com.smart.droid.reasoning');
   	}
 
   	//Rate US
   	$rootScope.rateus = function () {        
       window.analytics.trackEvent('Setting', 'Rate Us');    
-		  var url = "market://details?id=com.career.wrap.tamil.samayal";
+		  var url = "market://details?id=com.smart.droid.reasoning";
       window.open(url,"_system");		
   	};  
 
@@ -49,13 +47,14 @@ angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next'])
       window.analytics.trackEvent('Setting', 'Feedback');    
   		//FIXME - Collect version from app 
   		window.plugin.email.open({
-			 to:      ['tips2stayhealthy@gmail.com'],
-			 subject: 'Feedback on Tamil Samyal Kuripugal',
+			 to:      ['smartdroidies@gmail.com'],
+			 subject: 'Feedback on Reasoning Refresher',
 			 body:    '',
 			 isHtml:  true
 		  });
   	};
 
+    /*
   	//Recipies
   	$rootScope.recipie = function (piruvu) {        
   	    var newpath = "/recipies/" + piruvu;

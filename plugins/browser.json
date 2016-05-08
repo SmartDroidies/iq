@@ -18,6 +18,12 @@
         },
         "cordova-plugin-admobpro": {
             "PACKAGE_NAME": "com.smart.droid.reasoning"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.smart.droid.reasoning"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.smart.droid.reasoning.test"
         }
     },
     "dependent_plugins": {
