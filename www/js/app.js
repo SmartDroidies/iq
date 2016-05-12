@@ -1,10 +1,10 @@
-angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next'])
+angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next', 'iq.controllers'])
 
 .config(['$routeProvider', 
 		function ($routeProvider) {
 			$routeProvider.when('/home', {
-				templateUrl : 'views/home.html'
-				/* controller : 'HomeCtrl' */
+				templateUrl : 'views/home.html',
+				controller : 'HomeCtrl' 
       /*  
 			}).when('/recipies/:pirivu', {
 				templateUrl : 'views/recipies.html',

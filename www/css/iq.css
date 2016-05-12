@@ -1,0 +1,7 @@
+img.md-card-image {
+    height: 80px;
+}
+
+md-card md-card-header  {
+	padding: 4px;
+}
