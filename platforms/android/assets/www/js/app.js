@@ -1,17 +1,17 @@
-angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next', 'iq.controllers'])
+angular.module('iqApp', ['ngRoute', 'ngMaterial', 'underscore', 'jm.i18next', 'iq.controllers', 'iq.services', 'iq.cache'])
 
 .config(['$routeProvider', 
 		function ($routeProvider) {
 			$routeProvider.when('/home', {
 				templateUrl : 'views/home.html',
 				controller : 'HomeCtrl' 
+			}).when('/front/:mode', {
+				templateUrl : 'views/front.html',
+				controller : 'FrontCtrl'
+      }).when('/qnr/:mode', {
+        templateUrl : 'views/qnr.html',
+        controller : 'QnrCtrl'
       /*  
-			}).when('/recipies/:pirivu', {
-				templateUrl : 'views/recipies.html',
-				controller : 'RecipiesCtrl'
-      }).when('/recipie/detail/:index', {
-        templateUrl : 'views/recipie.html',
-        controller : 'RecipieCtrl'
 			}).when('/recipie/:id', {
 				templateUrl : 'views/recipie.html',
 				controller : 'RecipieCtrl'

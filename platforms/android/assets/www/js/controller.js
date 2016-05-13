@@ -8,31 +8,47 @@ angular.module('iq.controllers', [])
     //$scope.displayCategories();
   }; 
 
-  //Show Home Page
-  $scope.displayCategories = function () {    
 
-    var promise =  Category.getCategories();
-    promise.then (
-      function(data) {
-        $scope.categories = data.categories;
-        //console.log("Data Collected " + JSON.stringify(data));
-      },
-      function(error) {
-        //FIXME - Display Error
-        console.log('No Categories Found.');
-      });
-  }; 
-
-  //Method to take to recipie listing
-  $scope.recipie = function (piruvu) {        
-    //console.log("Display listing for : " + piruvu);
-    var newpath = "/recipies/" + piruvu;
-    //console.log("New Path to Navigate : " + newpath);
-    $location.path(newpath); 
+  //Method to take to casual questionnaire
+  $scope.casual = function () {        
+    var casual = "/front/casual";
+    $location.path(casual); 
   }  
 
   //Show Home
   $scope.displayView();
 
+})
+
+//Front Controller
+.controller('FrontCtrl', function($scope, $routeParams, $location) {
+
+  $scope.frontView = function(mode) {
+    console.log("Displaying Front Screen for Mode : " + mode);
+    $scope.mode = mode;
+  }
+
+  $scope.start = function() {
+    var pathQnr = "/qnr/" + $scope.mode;
+    $location.path(pathQnr); 
+  } 
+
+  var mode =  $routeParams.mode;
+  $scope.frontView(mode);
 
 })
+
+
+//Questionnaire Controller
+.controller('QnrCtrl', function($scope, $routeParams, $location, Questionnaire) {
+
+  $scope.question = function(mode) {
+    console.log("Collect Questions for selected mode");
+    var qustions = Questionnaire.getCasualQuestions();
+    $scope.mode = mode;
+  }
+
+  var mode =  $routeParams.mode;
+  $scope.question(mode);
+
+}); 

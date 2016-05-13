@@ -1,3 +1,5 @@
+var C_URL = 'http://smartdroidies.com/reasoning/?json=y';
+
 var testDevice = '9ff99ad5ec042ed6';
 var analyticsId = 'UA-45773318-4';
 
